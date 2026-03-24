@@ -3,9 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phosphor — Personal Finance for the Intentional</title>
-  <meta name="description" content="Phosphor is a personal finance app built for people serious about money. Fast entry logging, FIRE analytics, and privacy-first design.">
+  <title>Phosphor — Personal Finance App for FIRE & Intentional Money Tracking</title>
+  <meta name="description" content="Track spending, savings rate, and net worth in seconds. Phosphor is a privacy-first iOS finance app built for the FIRE community. Join the waitlist.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://phosphor.yumolab.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://phosphor.yumolab.com/">
+  <meta property="og:title" content="Phosphor — Track Your Money with Intention">
+  <meta property="og:description" content="Fast daily logging, FIRE-focused analytics, and privacy by default. A personal finance app built for people serious about their numbers.">
+  <meta property="og:site_name" content="Phosphor">
+  <meta property="og:image" content="https://phosphor.yumolab.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Phosphor — Track Your Money with Intention">
+  <meta name="twitter:description" content="Fast daily logging, FIRE-focused analytics, and privacy by default. Built for people serious about their numbers.">
+  <meta name="twitter:image" content="https://phosphor.yumolab.com/og.png">
+
+  <!-- SEO extras -->
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#e8590c">
+  <meta name="apple-mobile-web-app-title" content="Phosphor">
+  <meta name="application-name" content="Phosphor">
+  <meta name="author" content="YuMo Lab">
+  <meta name="keywords" content="personal finance app, FIRE movement, expense tracker, savings rate tracker, net worth tracker, privacy-first finance, iOS budget app, financial independence, money tracking app">
+
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23fb923c'/><stop offset='100%25' stop-color='%23e8590c'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='%23111'/><text x='50' y='72' font-family='system-ui,sans-serif' font-size='64' font-weight='800' fill='url(%23g)' text-anchor='middle'>P</text></svg>">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Phosphor",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "iOS",
+    "description": "A privacy-first personal finance app with fast entry logging, FIRE-focused analytics, and on-device data storage.",
+    "url": "https://phosphor.yumolab.com",
+    "author": {
+      "@type": "Organization",
+      "name": "YuMo Lab",
+      "url": "https://yumolab.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
@@ -456,15 +511,17 @@
 <body>
 
   <!-- NAV -->
-  <div class="nav-outer">
-    <nav>
+  <header class="nav-outer" role="banner">
+    <nav aria-label="Main navigation">
       <a href="#" class="nav-logo">Phosphor</a>
       <a href="#cta" class="nav-cta">Join Waitlist</a>
     </nav>
-  </div>
+  </header>
+
+  <main>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" aria-label="Hero">
     <div class="container hero-content">
       <div class="badge rv"><span class="badge-dot"></span>Coming soon for iOS</div>
       <h1 class="rv d1">Track your money with <em>intention</em></h1>
@@ -654,6 +711,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
