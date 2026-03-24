@@ -332,9 +332,10 @@
 
     /* === CTA + PHONE === */
     .cta-section{
-      padding:104px 0 0;overflow:hidden;
+      padding:48px 0 0;overflow:hidden;
       position:relative;
     }
+    @media(max-width:768px){.cta-section{padding:24px 0 0}}
     /* Gradient glow behind CTA section */
     .cta-section::before{
       content:'';position:absolute;
@@ -354,14 +355,15 @@
     @media(max-width:768px){
       .cta-grid{grid-template-columns:1fr;min-height:auto}
     }
-    .cta-text{padding-bottom:64px}
+    .cta-text{padding-bottom:32px}
+    @media(max-width:768px){.cta-text{padding-bottom:16px}}
     .cta-text h2{
-      font-size:clamp(1.75rem,3.8vw,2.5rem);
+      font-size:clamp(1.5rem,3.8vw,2.5rem);
       font-weight:700;letter-spacing:-.04em;line-height:1.12;margin-bottom:12px;
     }
     .cta-text>p{
       font-size:.9375rem;color:#666;line-height:1.65;
-      margin-bottom:24px;max-width:480px;
+      margin-bottom:20px;max-width:480px;
     }
     .wl-form{display:flex;gap:8px;max-width:380px}
     @media(max-width:480px){.wl-form{flex-direction:column}}
@@ -385,7 +387,7 @@
     }
     .wl-form button:hover{opacity:.75}
     .wl-form button:disabled{opacity:.5;cursor:not-allowed}
-    .wl-note{margin-top:28px;font-size:.75rem;color:#999}
+    .wl-note{margin-top:20px;font-size:.75rem;color:#999}
     .wl-success{
       display:none;margin-top:24px;padding:16px 20px;
       border:1px solid rgba(0,0,0,.06);border-radius:12px;
@@ -502,6 +504,12 @@
 
     .mobile-br{display:none}
     @media(max-width:520px){.mobile-br{display:inline}}
+
+    /* Mobile: left-align section headers */
+    @media(max-width:768px){
+      .sh.center{text-align:left}
+      .sh.center p{margin-left:0}
+    }
 
     .d1{transition-delay:.07s}.d2{transition-delay:.14s}
     .d3{transition-delay:.21s}.d4{transition-delay:.28s}
