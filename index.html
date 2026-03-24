@@ -35,8 +35,6 @@
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23fb923c'/><stop offset='100%25' stop-color='%23e8590c'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='%23111'/><text x='50' y='72' font-family='system-ui,sans-serif' font-size='64' font-weight='800' fill='url(%23g)' text-anchor='middle'>P</text></svg>">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -514,9 +512,25 @@
     .d1{transition-delay:.07s}.d2{transition-delay:.14s}
     .d3{transition-delay:.21s}.d4{transition-delay:.28s}
     .d5{transition-delay:.35s}.d6{transition-delay:.42s}
+
+    /* Accessibility */
+    .skip-link{
+      position:absolute;top:-100%;left:16px;
+      padding:8px 16px;background:#111;color:#fff;
+      font-size:.875rem;font-family:inherit;font-weight:500;
+      border-radius:8px;z-index:200;text-decoration:none;
+    }
+    .skip-link:focus{top:16px}
+    .sr-only{
+      position:absolute;width:1px;height:1px;
+      padding:0;margin:-1px;overflow:hidden;
+      clip:rect(0,0,0,0);white-space:nowrap;border:0;
+    }
   </style>
 </head>
 <body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <!-- NAV -->
   <header class="nav-outer" role="banner">
@@ -526,7 +540,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
 
   <!-- HERO -->
   <section class="hero" aria-label="Hero">
@@ -537,10 +551,11 @@
 
       <div class="form-wrap rv d3">
         <form class="hero-form" id="hero-form" action="https://app.loops.so/api/newsletter-form/cmn37fkfk01410iy4p5z6227x" method="POST" novalidate>
-          <input type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+          <label for="hero-email" class="sr-only">Email address</label>
+          <input type="email" name="email" id="hero-email" placeholder="you@example.com" required autocomplete="email">
           <button type="submit" class="btn">Join Waitlist</button>
         </form>
-        <p class="form-error" id="hero-form-error"></p>
+        <p class="form-error" id="hero-form-error" aria-live="polite"></p>
       </div>
     </div>
     <a href="#problem" class="scroll-hint rv d4" aria-label="Scroll down">
@@ -675,10 +690,11 @@
     
           <div class="form-wrap rv d3">
             <form class="wl-form" id="wl-form" action="https://app.loops.so/api/newsletter-form/cmn37fkfk01410iy4p5z6227x" method="POST" novalidate>
-              <input type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+              <label for="wl-email" class="sr-only">Email address</label>
+              <input type="email" name="email" id="wl-email" placeholder="you@example.com" required autocomplete="email">
               <button type="submit">Join Waitlist</button>
             </form>
-            <p class="form-error" id="wl-form-error"></p>
+            <p class="form-error" id="wl-form-error" aria-live="polite"></p>
           </div>
           <p class="wl-note rv d3">No spam. No sharing. Just a launch notification.</p>
           <div class="wl-success" id="wl-success">
@@ -728,6 +744,7 @@
       <div class="foot-l">Phosphor &copy; 2026</div>
       <div class="foot-links">
         <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
         <a href="mailto:hello@yumolab.com">Contact</a>
       </div>
     </div>
@@ -765,8 +782,8 @@
     }
 
     // Sync email inputs between hero and bottom forms
-    const heroInput=document.querySelector('#hero-form input');
-    const wlInput=document.querySelector('#wl-form input');
+    const heroInput=document.getElementById('hero-email');
+    const wlInput=document.getElementById('wl-email');
     heroInput.addEventListener('input',()=>{wlInput.value=heroInput.value});
     wlInput.addEventListener('input',()=>{heroInput.value=wlInput.value});
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://phosphor.yumolab.com/sitemap.xml
