@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Phosphor</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%25' stop-color='%23fb923c'/><stop offset='100%25' stop-color='%23e8590c'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='%23111'/><text x='50' y='72' font-family='system-ui,sans-serif' font-size='64' font-weight='800' fill='url(%23g)' text-anchor='middle'>P</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',system-ui,-apple-system,sans-serif;
+      background:#fff;color:#111;
+      line-height:1.7;-webkit-font-smoothing:antialiased;
+    }
+
+    /* Nav — matches index.html */
+    .nav-outer{
+      position:fixed;top:16px;left:0;right:0;z-index:100;
+      display:flex;justify-content:center;
+      padding:0 24px;pointer-events:none;
+    }
+    nav{
+      pointer-events:auto;
+      display:flex;align-items:center;justify-content:space-between;
+      width:100%;max-width:1060px;
+      height:56px;padding:0 8px 0 24px;
+      background:rgba(255,255,255,.6);
+      backdrop-filter:blur(24px) saturate(180%);
+      -webkit-backdrop-filter:blur(24px) saturate(180%);
+      border:1px solid rgba(255,255,255,.7);
+      border-radius:16px;
+      box-shadow:0 1px 2px rgba(0,0,0,.03),0 4px 16px rgba(0,0,0,.04),
+        0 12px 40px rgba(0,0,0,.03),inset 0 1px 0 rgba(255,255,255,.8);
+    }
+    .nav-logo{
+      font-size:1.0625rem;font-weight:800;letter-spacing:-.04em;
+      color:#111;text-decoration:none;
+    }
+    .nav-back{
+      display:flex;align-items:center;gap:4px;
+      padding:8px 20px;
+      background:#111;color:#fff;
+      font-size:.8125rem;font-weight:500;font-family:inherit;
+      border:none;border-radius:10px;cursor:pointer;
+      text-decoration:none;white-space:nowrap;
+      transition:opacity .2s;
+      box-shadow:0 1px 4px rgba(0,0,0,.06);
+    }
+    .nav-back:hover{opacity:.75}
+    .nav-back svg{width:14px;height:14px}
+
+    /* Content */
+    .page{max-width:680px;margin:0 auto;padding:120px 24px 80px}
+    .page h1{
+      font-size:clamp(1.75rem,4vw,2.5rem);
+      font-weight:700;letter-spacing:-.04em;line-height:1.15;
+      margin-bottom:8px;
+    }
+    .page .updated{font-size:.8125rem;color:#999;margin-bottom:48px}
+    .page h2{
+      font-size:1.125rem;font-weight:600;letter-spacing:-.02em;
+      margin-top:40px;margin-bottom:12px;
+    }
+    .page p,.page li{font-size:.9375rem;color:#444;margin-bottom:12px}
+    .page ul{padding-left:20px;margin-bottom:12px}
+    .page li{margin-bottom:6px}
+    .page a{color:#e8590c;text-decoration:none}
+    .page a:hover{text-decoration:underline}
+    .page strong{color:#111}
+
+    /* Footer */
+    footer{padding:24px 0;border-top:1px solid rgba(0,0,0,.05)}
+    .foot{
+      max-width:1060px;margin:0 auto;padding:0 24px;
+      display:flex;justify-content:space-between;align-items:center;
+    }
+    @media(max-width:520px){.foot{flex-direction:column;gap:6px}}
+    .foot-l{font-size:.8125rem;color:#999}
+    .foot-links{display:flex;gap:16px}
+    .foot-links a{font-size:.8125rem;color:#999;text-decoration:none;transition:color .2s}
+    .foot-links a:hover{color:#111}
+  </style>
+</head>
+<body>
+
+  <div class="nav-outer">
+    <nav>
+      <a href="index.html" class="nav-logo">Phosphor</a>
+      <a href="index.html" class="nav-back">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+        Back
+      </a>
+    </nav>
+  </div>
+
+  <main class="page">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: <script>document.write(new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}))</script></p>
+
+    <p>Phosphor ("we," "us," or "our") is a personal finance application developed by an independent developer based in Canada. This Privacy Policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+    <p>By using our website or app, you agree to the practices described below. If you do not agree, please do not use our services.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p><strong>Email address</strong> — When you join our waitlist, we collect your email address so we can notify you when Phosphor launches.</p>
+    <p><strong>On-device financial data</strong> — When you use the Phosphor app, your financial entries (income, expenses, transfers, categories, etc.) are stored locally on your device. This data is not transmitted to our servers unless you explicitly choose to enable cloud sync in the future.</p>
+    <p><strong>Automatically collected data</strong> — We may collect basic, anonymized usage analytics (e.g., app opens, feature usage) to improve the product. We do not collect personally identifiable information through analytics.</p>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li>To send you a notification when Phosphor launches (waitlist emails only)</li>
+      <li>To provide and improve app functionality</li>
+      <li>To understand how the app is used so we can make it better</li>
+    </ul>
+    <p>We will never sell your personal information to third parties.</p>
+
+    <h2>3. Third-Party Services</h2>
+    <p>We use the following third-party services that may process your data:</p>
+    <ul>
+      <!-- TODO: Update this list as you add/remove services -->
+      <li><strong>Loops</strong> (<a href="https://loops.so/privacy">privacy policy</a>) — Processes waitlist email addresses on our behalf. Loops acts as a data processor under our instructions.</li>
+    </ul>
+    <p>We require all third-party processors to handle your data in accordance with applicable privacy laws.</p>
+
+    <h2>4. Data Storage &amp; Security</h2>
+    <p><strong>Financial data stays on your device.</strong> Phosphor is designed with privacy at its core. Your financial entries, categories, and personal data are stored locally on your phone and are never sent to our servers unless you explicitly opt into a future cloud sync feature.</p>
+    <p>Waitlist email addresses are stored by our email service provider (Loops), whose servers are located in the United States. We take reasonable measures to protect your information, but no method of transmission over the internet is 100% secure.</p>
+
+    <h2>5. International Data Transfers</h2>
+    <p>We are based in Canada. If you are located outside of Canada (including the EU/EEA), your email address may be transferred to and processed in the United States through our third-party email service. These transfers are conducted in compliance with applicable data protection laws, including through standard contractual clauses where required.</p>
+
+    <h2>6. Your Rights</h2>
+    <p>Depending on where you live, you may have the following rights regarding your personal information:</p>
+    <ul>
+      <li><strong>Access</strong> — Request a copy of the personal data we hold about you</li>
+      <li><strong>Correction</strong> — Request correction of inaccurate data</li>
+      <li><strong>Deletion</strong> — Request that we delete your personal data</li>
+      <li><strong>Withdrawal of consent</strong> — Withdraw your consent at any time (e.g., unsubscribe from the waitlist)</li>
+      <li><strong>Data portability</strong> — Request your data in a portable format (EU/EEA residents)</li>
+      <li><strong>Complaint</strong> — Lodge a complaint with your local data protection authority</li>
+    </ul>
+    <p>For Canadian residents, you may contact the <a href="https://www.priv.gc.ca">Office of the Privacy Commissioner of Canada</a>. For EU/EEA residents, you may contact your local supervisory authority.</p>
+    <p>To exercise any of these rights, contact us at <a href="mailto:hello@yumolab.com">hello@yumolab.com</a>.</p>
+
+    <h2>7. Data Retention</h2>
+    <p>We retain your email address for as long as you remain on our waitlist or mailing list. You can unsubscribe at any time using the link in any email we send, and we will delete your email address within 30 days.</p>
+    <p>On-device financial data is retained on your device until you delete it or uninstall the app. We have no access to this data.</p>
+
+    <h2>8. Consent &amp; Email Communications</h2>
+    <p>By submitting your email through our waitlist form, you provide express consent to receive email communications from us about Phosphor. In compliance with Canada's Anti-Spam Legislation (CASL), we will only send you emails you've consented to receive. Every email includes an unsubscribe link.</p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>Phosphor is not directed at children under the age of 13 (or 16 in the EU/EEA). We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us and we will delete it promptly.</p>
+
+    <h2>10. Do Not Track</h2>
+    <p>Some browsers send a "Do Not Track" signal. We currently do not respond to DNT signals, as there is no industry-wide standard for compliance. However, we limit data collection to what is described in this policy.</p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. If we make material changes, we will notify you by updating the "Last updated" date at the top of this page. We encourage you to review this policy periodically.</p>
+
+    <h2>12. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy or your personal data, contact us at:</p>
+    <p><a href="mailto:hello@yumolab.com">hello@yumolab.com</a></p>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div class="foot-l">Phosphor &copy; 2026</div>
+      <div class="foot-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:hello@yumolab.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
